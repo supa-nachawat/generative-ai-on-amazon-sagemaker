@@ -144,4 +144,4 @@ def ensure_model_on_s3(
         )
 
     print(f"Model ready at: {model_s3_uri}")
-    return model_s3_uri
+    return model_s3_uri + "/"
