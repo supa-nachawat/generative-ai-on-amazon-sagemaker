@@ -52,7 +52,7 @@ def deploy(
                 'OPTION_MAX_MODEL_LEN': '4096'
             }
             
-            endpoint_name = f"{model_id.split('/')[-1].replace('.', '-').replace('_','-')}-sft-djl"
+            endpoint_name = f"{model_id.rstrip('/').split('/')[-1].replace('.', '-').replace('_','-')}-sft-djl"
 
             mlflow.log_params({
                 "model_id": model_id,
